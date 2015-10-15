@@ -41,8 +41,10 @@ TZ="Europe/Amsterdam"
 HISTFILE=$HOME/.zhistory
 HISTSIZE=5000
 SAVEHIST=5000
-HOSTNAME="`hostname`"
+# HOSTNAME="`hostname`"
+
 PAGER='less'
+
 EDITOR='vim'
     autoload colors zsh/terminfo
     if [[ "$terminfo[colors]" -ge 8 ]]; then
@@ -72,15 +74,15 @@ unsetopt ALL_EXPORT
 # # aliases
 # # --------------------------------------------------------------------
 
-alias slrn="slrn -n"
+# alias slrn="slrn -n"
 alias man='LC_ALL=C LANG=C man'
-alias f=finger
+# alias f=finger
 alias ll='ls -o'
 alias ls='ls --color=auto '
 alias lh='ls -lah --color=auto'
-alias offlineimap-tty='offlineimap -u TTY.TTYUI'
-alias hnb-partecs='hnb $HOME/partecs/partecs-hnb.xml'
-alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/python-docutils/s5_html/themes/default/print.css'
+# alias offlineimap-tty='offlineimap -u TTY.TTYUI'
+# alias hnb-partecs='hnb $HOME/partecs/partecs-hnb.xml'
+# alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/python-docutils/s5_html/themes/default/print.css'
 #if [[ $HOSTNAME == "kamna" ]] {
 #    alias emacs='emacs -l ~/.emacs.kamna'
 #}    
@@ -96,19 +98,21 @@ alias rest2html-css='rst2html --embed-stylesheet --stylesheet-path=/usr/share/py
 #    ;;
 #    esac
 #}
-selfupdate(){
-        URL="http://stuff.mit.edu/~jdong/misc/zshrc"
-        echo "Updating zshrc from $URL..."
-        echo "Press Ctrl+C within 5 seconds to abort..."
-        sleep 5
-        cp ~/.zshrc ~/.zshrc.old
-        wget $URL -O ~/.zshrc
-        echo "Done; existing .zshrc saved as .zshrc.old"
-}
+#  selfupdate(){
+#         URL="http://stuff.mit.edu/~jdong/misc/zshrc"
+#         echo "Updating zshrc from $URL..."
+#         echo "Press Ctrl+C within 5 seconds to abort..."
+#         sleep 5
+#         cp ~/.zshrc ~/.zshrc.old
+#         wget $URL -O ~/.zshrc
+#         echo "Done; existing .zshrc saved as .zshrc.old"
+# }
 #chpwd
 
-autoload -U compinit
+# autoload -U compinit
+
 compinit
+
 bindkey "^?" backward-delete-char
 bindkey '^[OH' beginning-of-line
 bindkey '^[OF' end-of-line

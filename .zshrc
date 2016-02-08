@@ -1,9 +1,4 @@
-######################################################################
-#           jdong's zshrc file v0.2.1 , based on:
-#              mako's zshrc file, v0.1
-#
-#                      burtified 2012-06-13
-######################################################################
+# Here's the .zshrc i stole in bits and pieces from wherever i found anything interesting:
 
 # next lets set some enviromental/shell pref stuff up
 # setopt NOHUP
@@ -18,7 +13,7 @@ unsetopt BG_NICE        # do NOT nice bg commands
 setopt CORRECT            # command CORRECTION
 setopt EXTENDED_HISTORY        # puts timestamps in the history
 # setopt HASH_CMDS        # turns on hashing
-#
+
 setopt MENUCOMPLETE
 setopt ALL_EXPORT
 
